@@ -32,7 +32,7 @@ The XLS file should take the name ```inventory_py_DDMMYY.xls``` (e.g. <i>invento
 
 # Example XLS content
 
-Create a XLS file like this: **inventory_py_210422.xls** with:
+Create an XLS file like this: **inventory_py_210422.xls** with:
 
 | Hostname |	ServiceTag	| Manufacturer| Model | WarrantyEnd | SupportEntity | Type | Subtype | User |	Management | Status | Comment |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
