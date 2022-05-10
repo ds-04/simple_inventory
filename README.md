@@ -10,13 +10,13 @@ Example XLS file content is included here in this README.
 
 # Why
 
-Needed something to process an inventory spreadheet (that anyone could maintain/upload) and regularly check for expiry of items. Thus, a page can be viewed that will always be reflective of status.
+Needed something to process an inventory spreadheet (that anyone could maintain/upload) and regularly check for expiry of items. Thus, a page can be viewed that will always be reflective of status (once the output is re-assembled somewhere).
 
 # How to use it? i)
 
 Look at the script - ```MainColumn``` and ```SecondaryColumn``` values in particular. Create your XLS file (inventory).
 
-The XLS file should take the name ```inventory_py_DDMMYY.xls``` (e.g. inventory_py_210422.xls)
+The XLS file should take the name ```inventory_py_DDMMYY.xls``` (e.g. <i>inventory_py_210422.xls</i>)
 
 - Simply drop in an XLS file into the same directory (```cwd```) as this script
 - Reference and adapt the script accordingly to suit the XLS headings
