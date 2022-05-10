@@ -6,7 +6,7 @@ The output could be made to be something else not RST.
 
 It's rough and ready and could be improved.
 
-An example XLS is included here.
+Example XLS file content is included here in this README.
 
 # Why
 
@@ -28,3 +28,15 @@ The XLS file should take the name ```inventory_py_DDMMYY.xls``` (e.g. inventory_
 # How to use it? ii)
 
 - Set it up in gitlab CI/CD and push to your wiki
+
+
+# Example XLS content
+
+Creat a XLS file like: **inventory_py_210422.xls** with:
+
+| Hostname |	ServiceTag	| Manufacturer| Model | WarrantyEnd | SupportEntity | Type | Subtype | User |	Management | Status | Comment |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| somehost1	| 123456 | Dell | Dell123	| 01-06-26 | Dell |	Storage	Server | Lab1 |	ENG1 | Active | Production |
+| somehost2 | 910784 | HP | HP123	| 01-01-22 | HP	| Storage	Server | Lab2 | ENG2 | InActive |Retiring |
+
+
