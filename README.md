@@ -16,7 +16,7 @@ Needed something to process an inventory spreadheet (that anyone could maintain/
 
 Look at the script - ```MainColumn``` and ```SecondaryColumn``` values in particular. Create your XLS file (inventory).
 
-The XLS file should take the name ```inventory_py_DDMMYY.xls``` (e.g. <i>inventory_py_210422.xls</i>)
+The XLS file should take the name ```inventory_py_DDMMYY.xls``` (e.g. <i>inventory_py_210422.xls</i>). Beware the currently script uses ```mtime``` to determine that this latest named file is the latest - its assumed your latest file would have the newest date in its name.
 
 - Simply drop in an XLS file into the same directory (```cwd```) as this script
 - Reference and adapt the script accordingly to suit the XLS headings
