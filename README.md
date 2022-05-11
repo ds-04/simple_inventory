@@ -18,16 +18,17 @@ Look at the script - ```MainColumn``` and ```SecondaryColumn``` values in partic
 
 The XLS file should take the name ```inventory_py_DDMMYY.xls``` (e.g. <i>inventory_py_210422.xls</i>). Beware that currently the script uses ```mtime``` to determine that this latest named file is the latest - its assumed your latest file would have the newest date in its name.
 
-- Simply drop in an XLS file into the same directory (```cwd```) as this script
-- Reference and adapt the script accordingly to suit the XLS headings
-- Run the script
+- Simply drop in an XLS file into the same directory (```cwd```) as this script.
+- Reference and adapt the script accordingly to suit the XLS headings. 
+- Check the ```DayThresh``` value is suitable - this governs how far to look ahead to consider approaching expiry.
+- Run the script.
 - Output is in ```cwd```
-- RST files and heading files are found
-- Do what you will with these - e.g. serve on a wiki
+- RST files are found as output. These are headings files and associated content files.
+- Do what you will with these - e.g. combine them and serve on a wiki/webbserver.
 
 # How to use it? ii)
 
-- Set it up in gitlab CI/CD and push to your wiki
+- Set it up in gitlab CI/CD and push to your wiki.
 
 
 # Example XLS content
