@@ -64,7 +64,7 @@ Hostname    ServiceTag    Manufacturer    Model    WarrantyEnd    SupportEntity 
 ==========  ============  ==============  =======  =============  ===============  ======  =========  ======  ============  ========  =========
 ```
 
-COMMENT ON ABOVE: table produced, but no entries as the XLS did have <i>WarrantyEnd</i> dates in both cells/items)
+COMMENT ON ABOVE: table produced, but no entries in this table (as the XLS did have <i>WarrantyEnd</i> dates in both cells/items)
 
 --------------
 
@@ -81,7 +81,7 @@ COMMENT ON ABOVE: table produced, but no entries as the XLS did have <i>Warranty
 ====  ==========  ============  ==============  =======  ===================  ===============  ==============  =========  ======  ============  ========  =========
 ```
 
-COMMENT ON ABOVE: table produced, an entry as the XLS was found to have an expired item.
+COMMENT ON ABOVE: table produced, an entry - as the XLS was found to have an expired item.
 
 --------------
 
@@ -97,5 +97,5 @@ COMMENT ON ABOVE: table produced, an entry as the XLS was found to have an expir
    0  somehost1         123456  Dell            Dell123  2026-06-01 00:00:00  Dell             Storage Server  Lab1       ENG1    Active        Production        nan
 ====  ==========  ============  ==============  =======  ===================  ===============  ==============  =========  ======  ============  ==========  =========
 ```
-COMMENT ON ABOVE: table produced, an entry as the XLS was found to have an item with plenty of remaining warranty.
+COMMENT ON ABOVE: table produced, an entry - as the XLS was found to have an item with plenty of remaining warranty.
 
