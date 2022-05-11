@@ -14,7 +14,9 @@ Needed something to process an inventory spreadheet (that anyone could maintain/
 
 # How to use it? i)
 
-Look at the script - ```MainColumn``` and ```SecondaryColumn``` values in particular. Create your XLS file (inventory).
+Look at the script - ```MainColumn``` and ```SecondaryColumn``` values in particular, these are the two columns that will be sorted by. 
+
+Create your XLS file (inventory).
 
 The XLS file should take the name ```inventory_py_DDMMYY.xls``` (e.g. <i>inventory_py_210422.xls</i>). Beware that currently the script uses ```mtime``` to determine that this latest named file is the latest - its assumed your latest file would have the newest date in its name.
 
