@@ -64,7 +64,7 @@ table_var_null=tabulate(df_filtered_in_null, headers='keys', tablefmt='rst') #no
 table_var0=tabulate(slice1, headers='keys', tablefmt='rst') #fall within threshold
 table_var1=tabulate(slice2, headers='keys', tablefmt='rst') #all others outside the threshold but not no date/expired entries
 
-#Write title1 then data/table1 - no warranty or expired
+#Write title0 then data/table0 - no warranty or expired
 f1 = open(WORKDIR+"/title0.inc", "w")
 f1.write("NO WARRANTY/LICENSE MAY REQUIRE IMMEDIATE ATTENTION!") #This is the first title, for title file0
 f1.close()
