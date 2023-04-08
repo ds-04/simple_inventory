@@ -37,8 +37,8 @@ print(latest_xls_path)
 #get file to process (newest)
 latest_xls_filename=max(glob.iglob(latest_xls_path.name), key=os.path.getmtime)
 
-#read in
-df=pd.read_excel(latest_xls_filename, index_col=None)
+#read in note D-M-Y needed in input
+df=pd.read_excel(latest_xls_filename, index_col=None, parse_dates=['WarrantyEnd'], date_format='%d-%m-%y'))
 
 #deal with errors
 df.WarrantyEnd = pd.to_datetime(df.WarrantyEnd, dayfirst=True, errors='coerce') #errors become NaT <<< can  dataframeMainColumn var be used?
@@ -47,17 +47,17 @@ df.WarrantyEnd = pd.to_datetime(df.WarrantyEnd, dayfirst=True, errors='coerce') 
 df_filtered_in_null=(df[df[MainColumn].isnull()])
 
 #get the date ahead
-date_N_days_ahead = (pd.Timestamp('now').floor('D') + pd.Timedelta(+DayThresh, unit='D')).strftime('%y-%m-%d')
+date_N_days_ahead = pd.Timestamp('now').floor('D') + pd.Timedelta(+DayThresh, unit='D')
 
 #use to deubg
 #print(date_N_days_ahead)
 #print("These items should be checked immediately")
 #print(df.Expiry)
-slice1 = df[df.WarrantyEnd.dt.strftime('%y-%m-%d') < date_N_days_ahead].sort_values(by=[MainColumn,SecondaryColumn])
+slice1 = df[df.WarrantyEnd < date_N_days_ahead].sort_values(by=[MainColumn,SecondaryColumn])
 
 #use to debug
 #print("ALL OTHER ENTRIES") # won't have expired/no date entries
-slice2 = df[df.WarrantyEnd.dt.strftime('%y-%m-%d') >= date_N_days_ahead].sort_values(by=[MainColumn,SecondaryColumn])
+slice2 = df[df.WarrantyEnd >= date_N_days_ahead].sort_values(by=[MainColumn,SecondaryColumn])
 
 #tabulate the two dfs of interest
 table_var_null=tabulate(df_filtered_in_null, headers='keys', tablefmt='rst') #no date/expired entries
