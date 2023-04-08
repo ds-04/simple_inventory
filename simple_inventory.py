@@ -38,7 +38,7 @@ print(latest_xls_path)
 latest_xls_filename=max(glob.iglob(latest_xls_path.name), key=os.path.getmtime)
 
 #read in note D-M-Y needed in input
-df=pd.read_excel(latest_xls_filename, index_col=None, parse_dates=['WarrantyEnd'], date_format='%d-%m-%y'))
+df=pd.read_excel(latest_xls_filename, index_col=None, parse_dates=['WarrantyEnd'], date_format='%d-%m-%y')
 
 #deal with errors
 df.WarrantyEnd = pd.to_datetime(df.WarrantyEnd, dayfirst=True, errors='coerce') #errors become NaT <<< can  dataframeMainColumn var be used?
