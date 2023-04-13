@@ -80,7 +80,7 @@ for iter in range(3):
     this_file="done"
   this_file="init"
   
-  with open(WORKDIR+"/content"+iter_str, 'w', encoding="utf-8") as this_file:
+  with open(WORKDIR+"/content"+iter_str+".inc", 'w', encoding="utf-8") as this_file:
     if iter == 0:
       this_file.write(table_var0)
       this_file.close()
